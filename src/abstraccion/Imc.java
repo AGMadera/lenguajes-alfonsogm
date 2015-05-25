@@ -12,7 +12,7 @@ package abstraccion;
 public class Imc {
     float peso;
     float altura;
-    
+      
  public Imc(float p, float a){
  peso=p;
  altura=a;
