@@ -14,6 +14,10 @@ public class Test1 {
     String nombre;
     float sueldo; 
     
+    public Test1(int valor){
+    
+     
+    }
     public Test1(){
     
     }

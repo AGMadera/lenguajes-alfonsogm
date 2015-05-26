@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package constructores;
-
-import javax.swing.JFrame;
+package encapsulamiento;
 
 /**
  *
  * @author T-107
  */
-public class ProbarTodo {
+public class ProbarEncapsulamiento {
 
     /**
      * @param args the command line arguments
@@ -19,12 +17,10 @@ public class ProbarTodo {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Test1 objeto1 = new Test1(2);
-        Test1 objeto2 = new Test1();
+        Usuario u1 =new Usuario();
+        u1.setEdad(22);
+        System.out.println("Tu edad es: "+u1.getEdad());
         
-        JFrame ventana=new JFrame("Mi primer ventana");
-               ventana.setSize(400, 400);
-               ventana.setVisible(true);
     }
     
 }
