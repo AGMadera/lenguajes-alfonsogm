@@ -12,7 +12,7 @@ package abstraccion;
 public class InterfazImc{  
 
 public static void main(String oso[]){
- Imc imc=new Imc(/*84,1.67f*/);
+ Imc imc=new Imc(84,1.67f);
  imc.setPeso(90);
  
  System.out.println(imc.calcular());
@@ -34,9 +34,9 @@ public static void main(String oso[]){
  double d=2.0;
  
  boolean valor =false;
- Imc otro=new Imc();
- otro.setFlaco(valor);
- System.out.println(otro.isFlaco());
+ //Imc otro=new Imc();
+ //otro.setFlaco(valor);
+ //System.out.println(otro.isFlaco());
  
  
 }

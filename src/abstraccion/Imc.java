@@ -14,9 +14,9 @@ public class Imc {
   private  float altura;
   private boolean flaco;
   
-  public Imc(/*float p, float a*/){
-  //peso=p;
-  //altura=a;
+  public Imc(float p, float a){
+  peso=p;
+  altura=a;
   
   
   }
