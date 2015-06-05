@@ -5,14 +5,14 @@
  */
 package Arreglos;
 
-import java.util.Arrays;
+
 
 /**
  *
  * @author T-107
  */
 public class Mensajes {
-    String texto;
+    private String texto;
 
     public String getTexto() {
         return texto;
@@ -29,21 +29,26 @@ public class Mensajes {
         return algo;
     }
      
-    public String Encript(byte[] algo){
-        for(byte n:algo)
-        {
-        System.out.print("Este elemento tiene un valor de: "+n);
-        System.out.println(" "+(char)n);
-        }
+    public StringBuilder Encript(byte[] algo){
         
-        String mns=Arrays.toString(algo);
-        return mns;
+        StringBuilder builder=new StringBuilder();
+        for(byte valor:algo)
+        {
+        StringBuilder b=builder.append((char)valor);
+        }
+        StringBuilder a=builder.append(algo);
+        
+        
+        return  a;
     
     }
-    public String codificado(String mns)
+    public StringBuilder codificado(StringBuilder b)
     {
-    return mns;
+       StringBuilder nb =b;
+    return nb;
     }
+    
+    
 
 }
      

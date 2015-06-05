@@ -43,7 +43,7 @@ public class ProbarArreglos {
         for(byte n:algo)
         {
         System.out.print("Este elemento tiene un valor de: "+n);
-         System.out.println(" "+(char)n);
+        System.out.println(" "+(char)n);
         }
        
         StringBuilder builder=new StringBuilder();

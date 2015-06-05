@@ -114,7 +114,7 @@ public class ProbarArreglosVisual extends javax.swing.JFrame {
         // TODO add your handling code here:
          String texto=new String( textomensaje.getText());
          Mensajes nose=new Mensajes(texto);
-         transformado.setText(" "+nose.codificado(texto));
+         transformado.setText(" "+nose.EnByte(texto));
          
     }//GEN-LAST:event_transformarActionPerformed
 
