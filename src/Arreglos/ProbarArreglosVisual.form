@@ -40,13 +40,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="original" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="Retransformar" min="-2" max="-2" attributes="0"/>
-                      <Component id="transformado" min="-2" max="-2" attributes="0"/>
                       <Component id="transformar" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Component id="textomensaje" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
+                      <Component id="textomensaje" alignment="0" pref="322" max="32767" attributes="0"/>
+                      <Component id="transformado" alignment="0" max="32767" attributes="0"/>
+                      <Component id="original" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>

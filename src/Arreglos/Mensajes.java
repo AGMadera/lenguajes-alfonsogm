@@ -29,14 +29,14 @@ public class Mensajes {
         return algo;
     }
      
-    public StringBuilder Encript(byte[] algo){
+    public String Encript(byte[] algo){
         
         StringBuilder builder=new StringBuilder();
         for(byte valor:algo)
         {
-        StringBuilder b=builder.append((char)valor);
+         builder.append(valor);
         }
-        StringBuilder a=builder.append(algo);
+        String a=builder.toString();
         
         
         return  a;

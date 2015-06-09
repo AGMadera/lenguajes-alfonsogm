@@ -69,13 +69,13 @@ public class ProbarArreglosVisual extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(original)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Retransformar)
-                    .addComponent(transformado)
                     .addComponent(transformar)
                     .addComponent(jLabel1)
-                    .addComponent(textomensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textomensaje, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                    .addComponent(transformado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(original, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,15 +111,39 @@ public class ProbarArreglosVisual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void transformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transformarActionPerformed
-        // TODO add your handling code here:
-         String texto=new String( textomensaje.getText());
-         Mensajes nose=new Mensajes(texto);
-         transformado.setText(" "+nose.EnByte(texto));
+        // TODO add your handling code here
+        //Paso 1 pedir texto
+         String texto= textomensaje.getText();
+         byte[]arreglo=texto.getBytes();
+         StringBuilder builder=new StringBuilder();
+         
+         for(byte b:arreglo)
+         {
+             builder.append(b);
+             builder.append(',');
+         }
+         
+         String t= builder.toString();
+         //Mensajes nose=new Mensajes(texto);
+         transformado.setText(t);
          
     }//GEN-LAST:event_transformarActionPerformed
 
     private void RetransformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetransformarActionPerformed
         // TODO add your handling code here:
+        String texto= textomensaje.getText();
+         byte[]arreglo=texto.getBytes();
+         StringBuilder builder=new StringBuilder();
+         
+         for(byte a:arreglo)
+         {
+             builder.append((char)a);
+         }
+         
+         String t= builder.toString();
+         //Mensajes nose=new Mensajes(texto);
+         original.setText(t);
+        
     }//GEN-LAST:event_RetransformarActionPerformed
 
     private void textomensajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textomensajeActionPerformed
