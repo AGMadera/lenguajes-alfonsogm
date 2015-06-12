@@ -14,10 +14,10 @@ public class Leon extends Animal implements ComportamientoRuido{
     @Override
     public String hacerRuido() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return "warrrrr!";
+        return "warrrrr! "+getNombre();
         
         
     }
-    
+
     
 }

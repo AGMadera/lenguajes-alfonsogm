@@ -9,6 +9,11 @@ package Herencia;
  *
  * @author alfonsogalvanmadera
  */
-public class Delfin extends Animal{
+public class Delfin extends Animal implements ComportamientoRuido{
+
+    @Override
+    public String hacerRuido() {
+         return "brriiiippp "+getNombre();
+    }
     
 }

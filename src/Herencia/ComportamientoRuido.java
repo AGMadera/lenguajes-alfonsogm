@@ -11,5 +11,6 @@ package Herencia;
  */
 public interface ComportamientoRuido {
     public String hacerRuido();
+
     
 }
