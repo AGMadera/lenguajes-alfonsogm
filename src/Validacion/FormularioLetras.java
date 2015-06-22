@@ -85,7 +85,7 @@ public class FormularioLetras extends javax.swing.JFrame {
             
             jLabel1.setText("Mas de 4 letras y menos de 10");
             //jLabel1.setText(mensaje);
-        } catch (MenordeCuatroException | MayordeDiezException  ex) {
+        } catch (MenordeCuatroException | MayordeDiezException | NulosException ex) {
             jLabel1.setText(ex.getMessage());   
         }
         

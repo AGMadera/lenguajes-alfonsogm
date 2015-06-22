@@ -26,7 +26,7 @@ public class ProbarLetras {
             ComprobarLetras.comprobar(mensaje);
             System.out.println("Mas de 4 letras y menos de 10");
             System.out.println(mensaje);
-        } catch (MenordeCuatroException | MayordeDiezException ex) {
+        } catch (MenordeCuatroException | MayordeDiezException | NulosException ex) {
             System.out.println(ex.getMessage());   
         }
         
