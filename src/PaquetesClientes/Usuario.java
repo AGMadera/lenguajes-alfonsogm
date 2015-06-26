@@ -46,11 +46,11 @@ public class Usuario{
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
-/*
+
    public Usuario(){
    ////Constructor por defecto
        
-   }*/
+   }
     public Usuario(String nombre, int edad, String email, Direccion direccion){
         //////inicializar todos los atributos
       this.nombre=nombre;

@@ -23,6 +23,13 @@ public class Antro {
         
         System.out.println(usuario.getDireccion().getMunicipio());
         
+        Bebida bebida=new Bebida();
+        bebida.setTipo("Alcoholica");
+        String[] reco=bebida.ObtenerRecomendaciones();
+        for(String be:reco){
+            System.out.println("Bebidas "+be);
+        }
+        
     }
     
 }
