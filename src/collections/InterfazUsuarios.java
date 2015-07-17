@@ -5,6 +5,10 @@
  */
 package collections;
 
+import java.util.Collections;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author alfonsogalvanmadera
@@ -63,6 +67,11 @@ public class InterfazUsuarios extends javax.swing.JFrame {
         jLabel3.setText("Edad");
 
         botonGuardar.setText("Guardar");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -108,12 +117,14 @@ public class InterfazUsuarios extends javax.swing.JFrame {
         jTabbedPane1.addTab("Agragar usuarios", jPanel1);
 
         botonCargarUsuarios.setText("Cargar usuarios");
+        botonCargarUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCargarUsuariosActionPerformed(evt);
+            }
+        });
 
         tablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -164,6 +175,27 @@ public class InterfazUsuarios extends javax.swing.JFrame {
     private void textoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textoEmailActionPerformed
+
+    private void botonCargarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarUsuariosActionPerformed
+        // TODO add your handling code here:
+        GeneradorDeUsuarios gen=new GeneradorDeUsuarios();
+        List<Usuario> usuarios=gen.getUsuarios();
+        Collections.sort(usuarios, new UsuarioPorNombre());
+        tablaUsuarios.setModel(new DefaultTableModel(new String[]{"Nombre","Edad", "email"}, gen.getUsuarios().size())); //Encadenamineto por metodos (method chaining)
+        int fila=0;
+        for(Usuario u: usuarios){
+            tablaUsuarios.setValueAt(u.getNombre(), fila,0);
+            tablaUsuarios.setValueAt(u.getEdad(), fila, 1);
+            tablaUsuarios.setValueAt(u.getMail(), fila, 2); 
+            fila++;
+        }
+        
+        
+    }//GEN-LAST:event_botonCargarUsuariosActionPerformed
+
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonGuardarActionPerformed
 
     /**
      * @param args the command line arguments
