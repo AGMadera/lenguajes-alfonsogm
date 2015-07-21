@@ -38,7 +38,7 @@ public class GeneradorDeUsuarios {
         this.usuarios = usuarios;
     }
     
-    public String agregarUsuario(String nombre, int edad, String email){
+    public String agregarUsuario(String nombre, Integer edad, String email){
         Usuario u=new Usuario(nombre, edad, email);
         usuarios.add(u);
         
