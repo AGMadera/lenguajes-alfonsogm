@@ -19,6 +19,27 @@ public class RelojitoChafa extends javax.swing.JFrame {
      */
     public RelojitoChafa() {
         initComponents();
+        
+        Thread t1=new Thread(new Runnable(){
+            public void run(){
+                while(true){
+                   try{
+                     Calendar cal=Calendar.getInstance();
+                     int  hora=cal.get(Calendar.HOUR);
+                     int minuto=cal.get(Calendar.MINUTE);
+                     int segundo=cal.get(Calendar.SECOND);
+                     
+                     jLabel1.setText(hora+":"+minuto+":"+segundo);
+                   Thread.sleep(1000);
+                   }catch(Exception e){
+                       
+                   }
+                }
+            }
+        }
+        );
+        t1.start();
+        
     }
 
     /**
