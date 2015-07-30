@@ -24,13 +24,13 @@ public class RelojitoChafa extends javax.swing.JFrame {
             public void run(){
                 while(true){
                    try{
+                     Thread.sleep(1000);
                      Calendar cal=Calendar.getInstance();
                      int  hora=cal.get(Calendar.HOUR);
                      int minuto=cal.get(Calendar.MINUTE);
                      int segundo=cal.get(Calendar.SECOND);
                      
                      jLabel1.setText(hora+":"+minuto+":"+segundo);
-                   Thread.sleep(1000);
                    }catch(Exception e){
                        
                    }
