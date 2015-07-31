@@ -5,42 +5,48 @@
  */
 package concurrencia;
 
-import java.util.*;
-
+import java.util.Calendar;
 
 /**
  *
  * @author alfonsogalvanmadera
  */
-public class RelojitoChafa extends javax.swing.JFrame {
+public class ContraReloj extends javax.swing.JFrame {
 
+    
+     int x=300;
+     int y=300;
     /**
-     * Creates new form RelojitoChafa
+     * Creates new form ContraReloj
      */
-    public RelojitoChafa() {
+    public ContraReloj() {
         initComponents();
-        
-        Thread t1=new Thread(new Runnable(){
+       
+        jLabel1.setText("Hola");
+        Thread t1=new Thread(new Runnable() {
+
             @Override
-            public void run(){
-                while(true){
-                   try{
-                     Thread.sleep(1000);
-                     Calendar cal=Calendar.getInstance();
-                     int  hora=cal.get(Calendar.HOUR);
-                     int minuto=cal.get(Calendar.MINUTE);
-                     int segundo=cal.get(Calendar.SECOND);
-                     
-                     jLabel1.setText(hora+":"+minuto+":"+segundo);
-                   }catch(Exception e){
-                       
-                   }
+            public void run() {
+                while (true){
+                try{
+                Thread.sleep(1000);
+                    setSize(x,y);
+                Calendar cal=Calendar.getInstance();
+                int hora=cal.get(Calendar.HOUR);
+                int minutos=cal.get(Calendar.MINUTE);
+                int segundos=cal.get(Calendar.SECOND);
+                jLabel1.setText(hora+":"+minutos+":"+segundos);
+                //if(minutos==57)dispose();
+                x=x+1;
+                y=y+1;
+                }catch(Exception e){
+                
+                }   
                 }
+                
             }
-        }
-        );
+        });
         t1.start();
-        
     }
 
     /**
@@ -56,6 +62,7 @@ public class RelojitoChafa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Mistral", 1, 24)); // NOI18N
         jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -63,16 +70,16 @@ public class RelojitoChafa extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addGap(137, 137, 137)
+                .addComponent(jLabel1)
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         pack();
@@ -95,24 +102,22 @@ public class RelojitoChafa extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RelojitoChafa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ContraReloj.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RelojitoChafa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ContraReloj.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RelojitoChafa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ContraReloj.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RelojitoChafa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ContraReloj.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RelojitoChafa().setVisible(true);
+                new ContraReloj().setVisible(true);
             }
         });
-        
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
